@@ -1,107 +1,141 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="pt-BR">
 <head>
-    <title>Alura Plus</title>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Exemplo de um site com todas as tags HTML possíveis.">
+    <meta name="author" content="Seu Nome">
+    <title>Exemplo Completo de Tags HTML</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: Arial, sans-serif; }
+        header, nav, section, article, footer { border: 1px solid #000; padding: 10px; margin: 10px 0; }
+        table, th, td { border: 1px solid black; }
+    </style>
+    <script>
+        function exibirMensagem() {
+            alert('Olá! Esta é uma mensagem de exemplo.');
+        }
+    </script>
 </head>
-
 <body>
-    <section class="principal container">
-        <div class="container__caixa">
-            <h1 class="container__titulo">Com o Combo+, você pode aproveitar a Alura+ e o Alura Língua por um preço
-                único.</h1>
-            <img src="img/Combo.png" alt="O combo+ é a junção do alura+ e o alura língua" class="container__imagem">
-            <a href="www.alura.com.br" class="container__botao">Assine por 12x de R$ 120,00*</a>
-            <a href="www.alura.com.br" class="container__botao botao_secundario">Assinar somente o Alura+</a>
-            <p class="container__aviso">*O preço pode variar caso a assinatura seja feita em outros planos.</p>
-        </div>
-    </section>
 
-    <section class="container secundario">
-        <img src="img/Plataformas.png" alt="Um monitor e um celular com a alura plus aberta" class="secundario__imagem">
-        <div class="container__descricao">
-            <h2 class="descricao__titulo">Assista do seu jeito</h2>
-            <p class="descricao__texto">Aproveite a tela grande da TV ou assista no tablet, laptop, celular e outros
-                aparelhos. Nossa seleção de cursos não para de crescer.</p>
-        </div>
-    </section>
+<header>
+    <h1>Bem-vindo ao Meu Site Completo</h1>
+    <p>Este é um exemplo de um site HTML que inclui uma ampla variedade de tags HTML.</p>
+</header>
 
-    <section class="container secundario">
-        <div class="container__descricao">
-            <p class="descricao__texto">
-                Só o Combo+ oferece Alura+ e Alura Língua juntos para você ter acesso a cursos de diversas áreas da
-                tecnologia e aprender inglês ou espanhol, onde e como quiser.
-            </p>
-            <a href="www.alura.com.br" class="container__botao secundario__botao" container>Assine o Combo+</a>
-        </div>
-        <img src="img/Telas.png" alt="Tela do alura+ e alura língua" class="secundario__imagem">
-    </section>
+<nav>
+    <ul>
+        <li><a href="#introducao">Introdução</a></li>
+        <li><a href="#conteudo">Conteúdo</a></li>
+        <li><a href="#formulario">Formulário</a></li>
+        <li><a href="#multimidia">Multimídia</a></li>
+    </ul>
+</nav>
 
-    <section class="container secundario">
-        <img src="img/Notebook.png" alt="Notebook com a página do curso HTML5 e CSS3 da Alura aberta"
-            class="secundario__imagem">
-        <div class="container__descricao">
-            <h2 class="descricao__titulo">Baixe seus cursos</h2>
-            <p class="descricao__texto">Baixe e assista quando e onde quiser. Assim, seus favoritos estão sempre com
-                você, até mesmo sem internet.</p>
-        </div>
-    </section>
-    
-    <section class="dispositivos">
-        <h2 class="dispositivos__titulo">Disponível nos seus dispositivos favoritos</h2>
-        <ul class="dispositivos__lista">
-            <li>
-                <img src="img/tv.png" alt="Ícone de televisão">
-                <h3 class="lista__item">TV</h3>
-            </li>
-            <li>
-                <img src="img/computador.png" alt="Ícone de computador">
-                <h3 class="lista__item">Computador</h3>
-            </li>
-            <li>
-                <img src="img/celular.png" alt="Ícone de celular">
-                <h3 class="lista__item">Celular</h3>
-            </li>
+<section id="introducao">
+    <h2>Introdução</h2>
+    <p>Esta seção introduz o conteúdo do site. Aqui estão alguns elementos básicos:</p>
+    <ul>
+        <li><strong>Negrito</strong></li>
+        <li><em>Itálico</em></li>
+        <li><u>Sublinhado</u></li>
+        <li><mark>Marcado</mark></li>
+    </ul>
+</section>
+
+<section id="conteudo">
+    <h2>Conteúdo</h2>
+    <article>
+        <h3>Um Artigo de Exemplo</h3>
+        <p>Este é um parágrafo dentro de um artigo. Aqui está um link para <a href="https://www.example.com">example.com</a>.</p>
+        <p>Lista ordenada:</p>
+        <ol>
+            <li>Primeiro item</li>
+            <li>Segundo item</li>
+            <li>Terceiro item</li>
+        </ol>
+        <p>Lista não ordenada:</p>
+        <ul>
+            <li>Item um</li>
+            <li>Item dois</li>
+            <li>Item três</li>
         </ul>
-    </section>
+    </article>
 
-    <footer class="rodape">
-        <img src="img/Logo.png" alt="Alura+" class="rodape__logo">
-        <ul class="rodape__lista">
-            <li class="lista__link">
-                <a href="#">Idioma</a>
-            </li>
-            <li class="lista__link">
-                <a href="#">Dispositivos compatíveis</a>
-            </li>
-            <li class="lista__link">
-                <a href="#">Contrato de assinatura</a>
-            </li>
-            <li class="lista__link">
-                <a href="#">Politica de privacidade</a>
-            </li>
-            <li class="lista__link">
-                <a href="#">Proteção de dados no Brasil</a>
-            </li>
-            <li class="lista__link">
-                <a href="#">Anuncios personalizados</a>
-            </li>
-            <li class="lista__link">
-                <a href="#">Ajuda</a>
-            </li>
-        </ul>
-        <p class="rodape__texto">® 2021 Alura, Alura+ e Alura Língua. Todos os direitos reservados. Serviço de
-            assinatura paga. Conteúdo sujeito a disponibilidade.</p>
-        <p class="rodape__texto">Alura+ é um serviço pago, baseado em assinatura e sujeito a termos e condições. O
-            serviço Alura+ é comercializado por Aovs Sistemas de Informática S.A., Rua Vergueiro, 3185 - Liberdade, São
-            Paulo - SP, 04101-300, Brasil e CNPJ 05.555.382/0001-33</p>
-    </footer>
+    <aside>
+        <h3>Nota Lateral</h3>
+        <p>Esta é uma seção de nota lateral que pode conter informações adicionais ou anúncios.</p>
+    </aside>
+</section>
+
+<section id="formulario">
+    <h2>Formulário de Contato</h2>
+    <form action="/submit-form" method="post">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome"><br><br>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email"><br><br>
+        
+        <label for="mensagem">Mensagem:</label>
+        <textarea id="mensagem" name="mensagem"></textarea><br><br>
+        
+        <fieldset>
+            <legend>Preferências</legend>
+            <label><input type="radio" name="contato" value="email"> Email</label><br>
+            <label><input type="radio" name="contato" value="telefone"> Telefone</label><br>
+            <label><input type="checkbox" name="novidades" value="sim"> Quero receber novidades</label><br>
+        </fieldset>
+        
+        <input type="submit" value="Enviar">
+    </form>
+</section>
+
+<section id="multimidia">
+    <h2>Multimídia</h2>
+    <figure>
+        <img src="imagem-exemplo.jpg" alt="Exemplo de Imagem">
+        <figcaption>Imagem de exemplo com legenda.</figcaption>
+    </figure>
+    <audio controls>
+        <source src="audio-exemplo.mp3" type="audio/mpeg">
+        Seu navegador não suporta o elemento de áudio.
+    </audio>
+    <video controls width="320" height="240">
+        <source src="video-exemplo.mp4" type="video/mp4">
+        Seu navegador não suporta o elemento de vídeo.
+    </video>
+</section>
+
+<table>
+    <caption>Tabela de Exemplo</caption>
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Idade</th>
+            <th>Cidade</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>João</td>
+            <td>25</td>
+            <td>São Paulo</td>
+        </tr>
+        <tr>
+            <td>Maria</td>
+            <td>30</td>
+            <td>Rio de Janeiro</td>
+        </tr>
+    </tbody>
+</table>
+
+<footer>
+    <p>&copy; 2024 Seu Nome. Todos os direitos reservados.</p>
+    <button onclick="exibirMensagem()">Clique aqui</button>
+</footer>
+
 </body>
-
 </html>
