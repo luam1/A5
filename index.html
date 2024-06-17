@@ -3,139 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Exemplo de um site com todas as tags HTML possíveis.">
-    <meta name="author" content="Seu Nome">
-    <title>Exemplo Completo de Tags HTML</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        body { font-family: Arial, sans-serif; }
-        header, nav, section, article, footer { border: 1px solid #000; padding: 10px; margin: 10px 0; }
-        table, th, td { border: 1px solid black; }
-    </style>
-    <script>
-        function exibirMensagem() {
-            alert('Olá! Esta é uma mensagem de exemplo.');
-        }
-    </script>
+    <title>Site com Carrossel</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
 
-<header>
-    <h1>Bem-vindo ao Meu Site Completo</h1>
-    <p>Este é um exemplo de um site HTML que inclui uma ampla variedade de tags HTML.</p>
-</header>
+<div class="container mt-5">
+    <!-- Barra de Itens com Botões -->
+    <div class="d-flex justify-content-between mb-3">
+        <div class="btn-group" role="group">
+            <button type="button" class="btn btn-primary">Item 1</button>
+            <button type="button" class="btn btn-secondary">Item 2</button>
+            <button type="button" class="btn btn-success">Item 3</button>
+        </div>
+    </div>
 
-<nav>
-    <ul>
-        <li><a href="#introducao">Introdução</a></li>
-        <li><a href="#conteudo">Conteúdo</a></li>
-        <li><a href="#formulario">Formulário</a></li>
-        <li><a href="#multimidia">Multimídia</a></li>
-    </ul>
-</nav>
-
-<section id="introducao">
-    <h2>Introdução</h2>
-    <p>Esta seção introduz o conteúdo do site. Aqui estão alguns elementos básicos:</p>
-    <ul>
-        <li><strong>Negrito</strong></li>
-        <li><em>Itálico</em></li>
-        <li><u>Sublinhado</u></li>
-        <li><mark>Marcado</mark></li>
-    </ul>
-</section>
-
-<section id="conteudo">
-    <h2>Conteúdo</h2>
-    <article>
-        <h3>Um Artigo de Exemplo</h3>
-        <p>Este é um parágrafo dentro de um artigo. Aqui está um link para <a href="https://www.example.com">example.com</a>.</p>
-        <p>Lista ordenada:</p>
-        <ol>
-            <li>Primeiro item</li>
-            <li>Segundo item</li>
-            <li>Terceiro item</li>
+    <!-- Carrossel -->
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
         </ol>
-        <p>Lista não ordenada:</p>
-        <ul>
-            <li>Item um</li>
-            <li>Item dois</li>
-            <li>Item três</li>
-        </ul>
-    </article>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://via.placeholder.com/800x400" class="d-block w-100" alt="Imagem 1">
+            </div>
+            <div class="carousel-item">
+                <img src="https://via.placeholder.com/800x400" class="d-block w-100" alt="Imagem 2">
+            </div>
+            <div class="carousel-item">
+                <img src="https://via.placeholder.com/800x400" class="d-block w-100" alt="Imagem 3">
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Anterior</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Próximo</span>
+        </a>
+    </div>
+</div>
 
-    <aside>
-        <h3>Nota Lateral</h3>
-        <p>Esta é uma seção de nota lateral que pode conter informações adicionais ou anúncios.</p>
-    </aside>
-</section>
-
-<section id="formulario">
-    <h2>Formulário de Contato</h2>
-    <form action="/submit-form" method="post">
-        <label for="nome">Nome:</label>
-        <input type="text" id="nome" name="nome"><br><br>
-        
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email"><br><br>
-        
-        <label for="mensagem">Mensagem:</label>
-        <textarea id="mensagem" name="mensagem"></textarea><br><br>
-        
-        <fieldset>
-            <legend>Preferências</legend>
-            <label><input type="radio" name="contato" value="email"> Email</label><br>
-            <label><input type="radio" name="contato" value="telefone"> Telefone</label><br>
-            <label><input type="checkbox" name="novidades" value="sim"> Quero receber novidades</label><br>
-        </fieldset>
-        
-        <input type="submit" value="Enviar">
-    </form>
-</section>
-
-<section id="multimidia">
-    <h2>Multimídia</h2>
-    <figure>
-        <img src="imagem-exemplo.jpg" alt="Exemplo de Imagem">
-        <figcaption>Imagem de exemplo com legenda.</figcaption>
-    </figure>
-    <audio controls>
-        <source src="audio-exemplo.mp3" type="audio/mpeg">
-        Seu navegador não suporta o elemento de áudio.
-    </audio>
-    <video controls width="320" height="240">
-        <source src="video-exemplo.mp4" type="video/mp4">
-        Seu navegador não suporta o elemento de vídeo.
-    </video>
-</section>
-
-<table>
-    <caption>Tabela de Exemplo</caption>
-    <thead>
-        <tr>
-            <th>Nome</th>
-            <th>Idade</th>
-            <th>Cidade</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>João</td>
-            <td>25</td>
-            <td>São Paulo</td>
-        </tr>
-        <tr>
-            <td>Maria</td>
-            <td>30</td>
-            <td>Rio de Janeiro</td>
-        </tr>
-    </tbody>
-</table>
-
-<footer>
-    <p>&copy; 2024 Seu Nome. Todos os direitos reservados.</p>
-    <button onclick="exibirMensagem()">Clique aqui</button>
-</footer>
-
+<!-- Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
