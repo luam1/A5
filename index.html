@@ -244,16 +244,22 @@
 </head>
 <body>
     <header>
-        <div class="menu-icon" onclick="toggleMenu()">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
         <nav>
-            <a href="#home">Home</a>
-            <a href="#books">Livros</a>
-            <a href="#contact">Contato</a>
-        </nav>
+    <div class="menu-icon" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <div class="menu-dropdown">
+        <a href="#home">Home</a>
+        <a href="#books">Livros</a>
+        <a href="#contact">Contato</a>
+    </div>
+    <div class="search-bar">
+        <input type="text" placeholder="Buscar livros...">
+        <button type="submit">Buscar</button>
+    </div>
+</nav>
         <div class="search-bar">
             <input type="text" placeholder="Buscar livros...">
             <button type="submit">Buscar</button>
