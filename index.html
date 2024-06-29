@@ -1,299 +1,311 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Livraria Online</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #ffffff;
-        } 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Livraria Online</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+        }
 
-        header {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
-            background-color: #00308a;
-            padding: 20px;
-        } 
+        header {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #00308a;
+            padding: 20px 40px;
+        }
 
-        nav {
-            width: 100px;
-            display: flex;
-            justify-content: space-between;
-        } 
+        nav {
+            display: flex;
+            gap: 20px;
+        }
 
-        .search-bar {
-            display: flex;
-            align-items: center;
-            gap: 5px;
-        } 
+        .search-bar {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
 
-        .search-bar input {
-            padding: 8px 20px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            outline: none;
-            font-size: 16px;
-        } 
+        .search-bar input {
+            padding: 10px;
+            border: 1px solid #000000;
+            border-radius: 5px;
+            outline: none;
+            font-size: 16px;
+        }
 
-        .search-bar button {
-            padding: 8px 15px;
-            border: none;
-            background-color: #333;
-            color: #fff;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-            transition: background-color 0.3s;
-        } 
+        .search-bar button {
+            padding: 10px;
+            border: none;
+            background-color: #acacac;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
 
-        .search-bar button:hover {
-            background-color: #555;
-        } 
+        .search-bar button:hover {
+            background-color: #ccc;
+        }
 
-        .button-container {
-            display: flex;
-            justify-content: space-between;
-            width: 50%; 
-            margin: 0 auto;
-        } 
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
 
-        .button-container button {
-            padding: 10px 20px;
-            font-size: 16px;
-        } 
+        .hero {
+            background-color: #e2e2e2;
+            padding: 50px 0;
+            text-align: center;
+        }
 
-        .container {
-            width: 80%;
-            margin: auto;
-            overflow: hidden;
-        } 
+        .hero h1 {
+            margin: 0;
+        }
 
-        .hero {
-            background-color: #e2e2e2;
-            padding: 50px 0;
-            text-align: center;
-        } 
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px 0;
+        }
 
-        .hero h1 {
-            margin: 0;
-        } 
+        .product {
+            flex: 0 0 200px;
+            margin: 10px;
+            background-color: #fff;
+            padding: 15px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
 
-        .products {
-            display: flex;
-            overflow-x: auto;
-            padding: 20px 0;
-        } 
+        .product img {
+            max-width: 100%;
+            height: auto;
+        }
 
-        .product {
-            flex: 0 0 auto;
-            width: 200px;
-            margin: 10px;
-            background-color: #fff;
-            padding: 15px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            text-align: center;
-        } 
+        .product button {
+            background-color: #00308a;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
 
-        .product img {
-            max-width: 100%;
-            height: auto;
-        } 
+        .product button:hover {
+            background-color: #575757;
+        }
 
-        .product button {
-            background-color: #00308a;
-            color: #fff;
-            border: none;
-            padding: 10px 15px;
-            cursor: pointer;
-            margin-top: 10px;
-        } 
+        .action-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 10px;
+        }
 
-        .product button:hover {
-            background-color: #575757;
-        } 
+        .action-buttons button {
+            padding: 5px 10px;
+            border: none;
+            background-color: #ddd;
+            cursor: pointer;
+            border-radius: 5px;
+        }
 
-        footer { 
-            background-color: #00308a;
-            color: white;
-            text-align: center;
-            padding: 10px;
-            position: fixed;
-            bottom: 0;
-            width: 100%; 
-        }
-    </style>
+        .action-buttons button:hover {
+            background-color: #ccc;
+        }
+
+        footer {
+            background-color: #00308a;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        .chat-box {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 300px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: none;
+            flex-direction: column;
+        }
+
+        .chat-header {
+            background-color: #00308a;
+            color: white;
+            padding: 10px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+        .chat-messages {
+            flex: 1;
+            padding: 10px;
+            overflow-y: auto;
+        }
+
+        .chat-input {
+            display: flex;
+            padding: 10px;
+            border-top: 1px solid #ccc;
+        }
+
+        .chat-input input {
+            flex: 1;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .chat-input button {
+            padding: 5px 10px;
+            border: none;
+            background-color: #00308a;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-left: 5px;
+        }
+
+        .menu-icon {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .menu-icon div {
+            width: 25px;
+            height: 3px;
+            background-color: #fff;
+            margin: 4px 0;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                display: none;
+            }
+
+            .menu-icon {
+                display: flex;
+            }
+
+            .search-bar {
+                flex: 1;
+            }
+
+            header {
+                justify-content: space-between;
+            }
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <nav class="nav">
-            <a href="#home">Início</a>
-            <a href="#about">Sobre</a>
-            <a href="#books">Livros</a>
-        </nav>
-        <div class="search-bar">
-            <input type="text" placeholder="Buscar livros...">
-            <button type="submit">Buscar</button>
-        </div>
-    </header> 
+    <header>
+        <div class="menu-icon" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#books">Livros</a>
+            <a href="#contact">Contato</a>
+        </nav>
+        <div class="search-bar">
+            <input type="text" placeholder="Buscar livros...">
+            <button type="submit">Buscar</button>
+        </div>
+    </header>
 
-    <div class="hero" id="home">
-        <div class="container">
-            <h1>Bem-vindo à Livraria Online</h1>
-            <p>Descubra uma vasta coleção de livros ao seu alcance de forma acessível e grátis.</p>              
-            <p>PS: Não assumimos responsabilidade por qualquer dado clonado.</p>
-        </div>
-    </div> 
+    <div class="hero" id="home">
+        <div class="container">
+            <h1>Bem-vindo à Livraria Online</h1>
+            <p>Descubra uma vasta coleção de livros ao seu alcance de forma acessível e grátis.</p>
+            <p>PS: Não assumimos responsabilidade por qualquer dado clonado</p>
+        </div>
+    </div>
 
-    <div class="container">
-        <h2 id="books">Livros em Destaque</h2>
-        <div class="products">
-            <div class="product">
-                <img src="https://m.media-amazon.com/images/I/81TmHlRleJL._AC_UF1000,1000_QL80_FMwebp_.jpg" alt="Livro 1" width="195">
-                <h3>Livro 1</h3>
-                <p>Autor: Autor 1</p>
-                <button onclick="alert('Livro 1 adicionado ao carrinho!')">Adicionar ao Carrinho</button>
-            </div>
-            <div class="product">
-                <img src="https://m.media-amazon.com/images/I/61YQD6u5liL._AC_UF1000,1000_QL80_FMwebp_.jpg" alt="Livro 2" width="185">
-                <h3>Livro 2</h3>
-                <p>Autor: Autor 2</p>
-                <button onclick="alert('Livro 2 adicionado ao carrinho!')">Adicionar ao Carrinho</button>
-            </div>
-            <div class="product">
-                <img src="https://m.media-amazon.com/images/I/91zj0WZtIYL._AC_UF1000,1000_QL80_FMwebp_.jpg" alt="Livro 3">
-                <h3>Livro 3</h3>
-                <p>Autor: Autor 3</p>
-                <button onclick="alert('Livro 3 adicionado ao carrinho!')">Adicionar ao Carrinho</button>
-            </div>
-            <div class="product">
-                <img src="https://m.media-amazon.com/images/I/81OYRZEQG7L._AC_UF1000,1000_QL80_FMwebp_.jpg" alt="Livro 4" width="285">
-                <h3>Livro 4</h3>
-                <p>Autor: Autor 4</p>
-                <button onclick="alert('Livro 4 adicionado ao carrinho!')">Adicionar ao Carrinho</button>
-            </div>
-            <div class="product">
-                <img src="https://m.media-amazon.com/images/I/51Fe45NGwkL._SY466_.jpg" alt="Livro 5" width="181">
-                <h3>Livro 5</h3>
-                <p>Autor: Autor 5</p>
-                <button onclick="alert('Livro 5 adicionado ao carrinho!')">Adicionar ao Carrinho</button>
-            </div>
-            <div class="product">
-                <img src="https://m.media-amazon.com/images/I/518mqZ7A31L._SY445_SX342_.jpg" alt="Livro 6" width="193">
-                <h3>Livro 6</h3>
-                <p>Autor: Autor 6</p>
-                <button onclick="alert('Livro 6 adicionado ao carrinho!')">Adicionar ao Carrinho</button>
-            </div>
-            <div class="product">
-                <img src="https://m.media-amazon.com/images/I/81ibfYk4qmL._SY425_.jpg" alt="Livro 7" height="auto" width="200">
-                <h3>Livro 7</h3>
-                <p>Autor: Autor 7</p>
-                <button onclick="alert('Livro 7 adicionado ao carrinho!')">Adicionar ao Carrinho</button>
-            </div>
-            <div class="product">
-                <img src="https://m.media-amazon.com/images/I/41RBd2DvmgL._SY445_SX342_.jpg" alt="Livro 8" width="187">
-                <h3>Livro 8</h3>
-                <p>Autor: Autor 8</p>
-                <button onclick="alert('Livro 8 adicionado ao carrinho!')">Adicionar ao Carrinho</button>
-            </div>
-            <div class="product">
-                <img src="https://m.media-amazon.com/images/I/81slUinjTlS._AC_UF1000,1000_QL80_FMwebp_.jpg" alt="Livro 9" width="191">
-                <h3>Livro 9</h3>
-                <p>Autor: Autor 9</p>
-                <button onclick="alert('Livro 9 adicionado ao carrinho!')">Adicionar ao Carrinho</button>
-            </div>
-            <div class="product">
-                <img src="https://m.media-amazon.com/images/I/815Bx8hFodL._AC_UF1000,1000_QL80_FMwebp_.jpg" alt="Livro 10" width="194">
-                <h3>Livro 10</h3>
-                <p>Autor: Autor 10</p>
-                <button onclick="alert('Livro 10 adicionado ao carrinho!')">Adicionar ao Carrinho</button>
-            </div>
-            <div class="product">
-                <img src="https://m.media-amazon.com/images/I/81diwihAz6L._AC_UF1000,1000_QL80_FMwebp_.jpg" alt="Livro 11" width="185">
-                <h3>Livro 11</h3>
-<p>Autor: Autor 11</p>
-                <button onclick="alert('Livro 11 adicionado ao carrinho!')">Adicionar ao Carrinho</button>
-            </div>
-            <div class="product">
-                <img src="https://via.placeholder.com/150" alt="Livro 12">
-                <h3>Livro 12</h3>
-                <p>Autor: Autor 12</p>
-                <button onclick="alert('Livro 12 adicionado ao carrinho!')">Adicionar ao Carrinho</button>
-            </div>
-            <div class="product">
-                <img src="https://via.placeholder.com/150" alt="Livro 13">
-                <h3>Livro 13</h3>
-                <p>Autor: Autor 13</p>
-                <button onclick="alert('Livro 13 adicionado ao carrinho!')">Adicionar ao Carrinho</button>
-            </div>
-            <div class="product">
-                <img src="https://via.placeholder.com/150" alt="Livro 14">
-                <h3>Livro 14</h3>
-                <p>Autor: Autor 14</p>
-                <button onclick="alert('Livro 14 adicionado ao carrinho!')">Adicionar ao Carrinho</button>
-            </div>
-        </div>
-    </div> 
+    <div class="container">
+        <h2 id="books">Livros em Destaque</h2>
+        <div class="products">
+            <!-- Exemplo de um produto -->
+            <div class="product">
+                <img src="https://m.media-amazon.com/images/I/81TmHlRleJL._AC_UF1000,1000_QL80_FMwebp_.jpg" alt="Livro 1">
+                <h3>Jujutsu no kaisen</h3>
+                <p>Autor: Gege Akutami</p>
+                <button onclick="alert('Livro 1 adicionado ao carrinho!')">Adicionar ao Carrinho</button>
+                <div class="action-buttons">
+                    <button>❤️</button>
+                    <button>⭐</button>
+                </div>
+            </div>
+            <!-- Outros produtos -->
+        </div>
+    </div>
 
-    <div class="container">
-        <h2 id="about">Livros Infantis</h2>
-        <div class="products">
-            <div class="product">
-                <img src="https://via.placeholder.com/150" alt="Livro Infantil 1">
-                <h3>Livro Infantil 1</h3>
-                <p>Autor: Autor 1</p>
-                <button onclick="alert('Livro Infantil 1 adicionado ao carrinho!')">Adicionar ao Carrinho</button>
-            </div>
-            <div class="product">
-                <img src="https://via.placeholder.com/150" alt="Livro Infantil 2">
-                <h3>Livro Infantil 2</h3>
-                <p>Autor: Autor 2</p>
-                <button onclick="alert('Livro Infantil 2 adicionado ao carrinho!')">Adicionar ao Carrinho</button>
-            </div>
-            <div class="product">
-                <img src="https://via.placeholder.com/150" alt="Livro Infantil 3">
-                <h3>Livro Infantil 3</h3>
-                <p>Autor: Autor 3</p>
-                <button onclick="alert('Livro Infantil 3 adicionado ao carrinho!')">Adicionar ao Carrinho</button>
-            </div>
-            <div class="product">
-                <img src="https://via.placeholder.com/150" alt="Livro Infantil 4">
-                <h3>Livro Infantil 4</h3>
-                <p>Autor: Autor 4</p>
-                <button onclick="alert('Livro Infantil 4 adicionado ao carrinho!')">Adicionar ao Carrinho</button>
-            </div>
-            <div class="product">
-                <img src="https://via.placeholder.com/150" alt="Livro Infantil 5">
-                <h3>Livro Infantil 5</h3>
-                <p>Autor: Autor 5</p>
-                <button onclick="alert('Livro Infantil 5 adicionado ao carrinho!')">Adicionar ao Carrinho</button>
-            </div>
-            <div class="product">
-                <img src="https://via.placeholder.com/150" alt="Livro Infantil 6">
-                <h3>Livro Infantil 6</h3>
-                <p>Autor: Autor 6</p>
-                <button onclick="alert('Livro Infantil 6 adicionado ao carrinho!')">Adicionar ao Carrinho</button>
-            </div>
-        </div>
-    </div> 
+    <footer>
+        <p>&copy; 2024 Livraria Online</p>
+    </footer>
 
-    <footer><p>&copy; 2024 Livraria Online. Todos os direitos reservados.</p></footer>            
+    <div class="chat-box" id="chatBox">
+        <div class="chat-header">
+            Chat
+            <button onclick="toggleChat()">Fechar</button>
+        </div>
+        <div class="chat-messages" id="chatMessages"></div>
+        <div class="chat-input">
+            <input type="text" id="chatInput" placeholder="Digite uma mensagem...">
+            <button onclick="sendMessage()">Enviar</button>
+        </div>
+    </div>
 
-    <script>
-        document.querySelectorAll('nav a').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault(); 
+    <script>
+        function toggleMenu() {
+            const nav = document.querySelector('nav');
+            nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
+        }
 
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-    </script>
+        function toggleChat() {
+            const chatBox = document.getElementById('chatBox');
+            chatBox.style.display = chatBox.style.display === 'flex' ? 'none' : 'flex';
+        }
+
+        function sendMessage() {
+            const chatMessages = document.getElementById('chatMessages');
+            const chatInput = document.getElementById('chatInput');
+            const message = chatInput.value;
+            if (message.trim()) {
+                const messageElement = document.createElement('div');
+                messageElement.textContent = message;
+                chatMessages.appendChild(messageElement);
+                chatInput.value = '';
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+            }
+        }
+
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 </html>
